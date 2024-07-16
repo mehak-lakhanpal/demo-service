@@ -8,18 +8,16 @@ There are several ways to run a Spring Boot application on your local machine. O
 
 Alternatively you can use the [Spring Boot Maven plugin](https://docs.spring.io/spring-boot/docs/current/reference/html/build-tool-plugins-maven-plugin.html) like so:
 
-```shell
-mvn spring-boot:run
 ```
+mvn spring-boot:run
 ```
 
 ##How to Run test cases
 
 You can use below command to build the project and to run test cases and to generate test case report.
 
-```shell
-mvn clean install
 ```
+mvn clean install
 ```
 
 You can find the code coverage report under folder target/site/index.html
@@ -41,7 +39,6 @@ There are some assumptions which i took while creating this service are-
 
 * As user will get only discount at a time on a bill. So If user is not an employee or affiliate or customer has a relationship with store over 2 years, Only then this discount - For every $100 on the bill, there would be a $ 5 discount , will be applied on bill.
 * As it is mentioned in the problem statement that the program should only return the net amount to be paid,API is returning only the net amount as response, no other fields. Other fields will be added if required in future.
-
 
 Here is the endpoint you can call to calculate net amount to be paid after discount:
 
