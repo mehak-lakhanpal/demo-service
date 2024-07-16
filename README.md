@@ -43,7 +43,7 @@ There are some assumptions which i took while creating this service are-
 * As it is mentioned in the problem statement that the program should only return the net amount to be paid,API is returning only the net amount as response, no other fields. Other fields will be added if required in future.
 
 
-Here are the endpoint you can call to calculate net amount to be paid after discount:
+Here is the endpoint you can call to calculate net amount to be paid after discount:
 
 ### Calculate Net amount on a bill after discount
 
@@ -78,6 +78,7 @@ RESPONSE: HTTP 200 (OK)
 {
 	netAmount: 195.0
 }
+```
 
 ## How to Run Static Code Analysis Using Sonarlint
 
