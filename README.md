@@ -39,10 +39,14 @@ There are some assumptions which i took while creating this service are-
 
 * As user will get only discount at a time on a bill. So If user is not an employee or affiliate or customer has a relationship with store over 2 years, Only then this discount - For every $100 on the bill, there would be a $ 5 discount , will be applied on bill.
 * As it is mentioned in the problem statement that the program should only return the net amount to be paid,API is returning only the net amount as response, no other fields. Other fields will be added if required in future.
+* Product List and Customer Object which contains his name , type etc is mandatory.
+* Product's name, category, price and quantity is mandatory . Price and quantity of product should not be equals to 0.
 
 Here is the endpoint you can call to calculate net amount to be paid after discount:
 
 ### Calculate Net amount on a bill after discount
+
+In case of Success-
 
 ```
 POST http://localhost:9867/discount
@@ -76,6 +80,28 @@ RESPONSE: HTTP 200 (OK)
 	netAmount: 195.0
 }
 ```
+In case of Exception-
+
+```
+{
+    "products": [
+    ],
+    "customer": {
+        "name": "mehak",
+        "customerType": "CUSTOMER",
+        "yearsWithStore": 3
+    }
+}
+
+RESPONSE: HTTP 200 (OK)
+{
+    "message": "Product List should not be empty"
+}
+```
+
+## How to Run Static Code Analysis Using Sonarlint
+
+UML Diagram of this solution is present in root folder with name -  UML_Diagram.jpeg
 
 ## How to Run Static Code Analysis Using Sonarlint
 
